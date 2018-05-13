@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="14dp">
+
+        <TextView
+            android:id="@+id/activity_birthday_list_first_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="first name"
+            android:textColor="#000"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/activity_birthday_list_la_name_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="last name"
+            android:textColor="#000"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/activity_birthday_list_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="19/10/1999"
+            android:textColor="#000"
+            android:textSize="23sp"/>
+
+
+
+</LinearLayout>

@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         * */
 
         btnNameList.add(new MainActivityListItem("calculator" , 1));
-        btnNameList.add(new MainActivityListItem("app2" , 2));
+        btnNameList.add(new MainActivityListItem("Birthday" , 2));
         btnNameList.add(new MainActivityListItem("ap3" , 3));
         btnNameList.add(new MainActivityListItem("app4" , 4));
         btnNameList.add(new MainActivityListItem("app5" , 5));
