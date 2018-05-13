@@ -8,6 +8,7 @@ import android.view.View;
 public class MainAppBtnPressred implements View.OnClickListener {
 
     Context context;
+    Intent intent;
     public MainAppBtnPressred(Context context) {
         this.context = context;
     }
@@ -16,14 +17,14 @@ public class MainAppBtnPressred implements View.OnClickListener {
         switch (v.getId()){
             case 1:
                 Log.d(AppSettings.TAG , "onStartClicked 1");
-                Intent intent = new Intent(context , CalculatorActivity.class);
+                intent = new Intent(context , CalculatorActivity.class);
                 context.startActivity(intent);
                 break;
 
             case 2:
                 Log.d(AppSettings.TAG , "onStartClicked 2");
-              /*  Intent intent = new Intent("android.intent.action.Customer");
-                context.startActivity(intent);*/
+                intent = new Intent(context , BirthdayActivity.class);
+                context.startActivity(intent);
                 break;
 
             case 3:
