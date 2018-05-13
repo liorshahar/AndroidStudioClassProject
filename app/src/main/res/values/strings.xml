@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">AndroidStudioCourseApp</string>
+    <string name="title_activity_calculator_activity">CalculatorActivitu</string>
+    <string name="char1">1</string>
+    <string name="char2">2</string>
+    <string name="char3">3</string>
+    <string name="char4">4</string>
+    <string name="char5">5</string>
+    <string name="char6">6</string>
+    <string name="char7">7</string>
+    <string name="char8">8</string>
+    <string name="char9">9</string>
+    <string name="title_activity_birtday">BirtdayActivity</string>
+</resources>
