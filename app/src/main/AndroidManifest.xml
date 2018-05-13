@@ -20,10 +20,10 @@
             android:name=".CalculatorActivity"
             android:label="@string/title_activity_calculator_activity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".BirthdayActivity"
-            android:label="Birthday List">
-        </activity>
-
+        <activity
+            android:name=".BirthdayActivity"
+            android:label="@string/title_activity_birthday"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
