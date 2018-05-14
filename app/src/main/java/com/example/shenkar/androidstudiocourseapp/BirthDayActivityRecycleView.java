@@ -10,13 +10,14 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 class BirthDayActivityRecycleView extends RecyclerView.Adapter<BirthDayActivityRecycleView.ViewHolder> {
 
     Context context;
-    ArrayList<String> birthDay;
+    List<BirthDayInstance> birthDay;
 
-    public BirthDayActivityRecycleView(Context context, ArrayList<String> birthDay) {
+    public BirthDayActivityRecycleView(Context context, List<BirthDayInstance> birthDay) {
         Log.d(AppSettings.TAG , "BirthDayActivityRecycleView: BirthDayActivityRecycleView");
         this.context = context;
         this.birthDay = birthDay;
@@ -34,7 +35,11 @@ class BirthDayActivityRecycleView extends RecyclerView.Adapter<BirthDayActivityR
     @Override
 
     public void onBindViewHolder(@NonNull BirthDayActivityRecycleView.ViewHolder holder, int position) {
-            holder.firstName.setText(birthDay.get(position));
+
+        Log.d(AppSettings.TAG , "name: " + birthDay.get(position).getFirstName() + "last: " + birthDay.get(position).getLastName() + "date: " + birthDay.get(position).getDate());
+        holder.firstName.setText(birthDay.get(position).getFirstName());
+        holder.lastName.setText(birthDay.get(position).getLastName());
+        holder.myDate.setText( birthDay.get(position).getDate());
     }
 
     @Override

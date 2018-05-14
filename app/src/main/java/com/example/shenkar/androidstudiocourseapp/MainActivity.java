@@ -1,5 +1,6 @@
 package com.example.shenkar.androidstudiocourseapp;
 
+import android.arch.persistence.room.Room;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -15,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView.Adapter adapter;
     private List<MainActivityListItem> btnNameList;
     private MainAppBtnPressred mainAppBtnPressred;
-
+    public static  AppDataBase appDataBase;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         mainRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         btnNameList = new ArrayList<>();
         mainAppBtnPressred = new MainAppBtnPressred(this);
-
+        appDataBase = Room.databaseBuilder(getApplicationContext() , AppDataBase.class , "db").allowMainThreadQueries().build();
         /*
         * Set btn mames
         * */

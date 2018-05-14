@@ -1,6 +1,8 @@
 package com.example.shenkar.androidstudiocourseapp;
 
 import android.app.DatePickerDialog;
+import android.arch.persistence.room.Room;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -12,6 +14,7 @@ import android.widget.TextView;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class CreateBirthDayActivity extends AppCompatActivity {
 
@@ -21,7 +24,7 @@ public class CreateBirthDayActivity extends AppCompatActivity {
     EditText date;
     TextView title;
     Button submit;
-    DatePickerDialog datePickerDialog;
+
 
 
     @Override
@@ -45,18 +48,13 @@ public class CreateBirthDayActivity extends AppCompatActivity {
 
         submit.setOnClickListener(new View.OnClickListener(){
 
-            SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy");
             @Override
             public void onClick(View v) {
                 Log.d(AppSettings.TAG , "first name: " + firstName.getText());
                 Log.d(AppSettings.TAG , "last name: " + lastName.getText());
                 Log.d(AppSettings.TAG , "date : " + date.getText());
-                Editable myDate = date.getText();
-                try {
-                    Log.d(AppSettings.TAG , "myDate: " +df.parse(String.valueOf(myDate)));
-                } catch (ParseException e) {
-                    e.printStackTrace();
-                }
+                MainActivity.appDataBase.birthdayDao().insertAll(new BirthDayInstance(firstName.getText().toString() , lastName.getText().toString() ,  date.getText().toString()));
+                finish();
 
             }
         });

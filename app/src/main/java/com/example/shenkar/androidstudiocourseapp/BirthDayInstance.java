@@ -7,8 +7,8 @@ import android.arch.persistence.room.PrimaryKey;
 import java.util.Date;
 
 
-@Entity
-public class BirthDayInstanse {
+@Entity(tableName = "birthdays")
+public class BirthDayInstance {
 
     @PrimaryKey(autoGenerate = true)
     private  int id;
@@ -18,10 +18,10 @@ public class BirthDayInstanse {
     @ColumnInfo(name = "last_name")
     private String lastName;
     @ColumnInfo(name = "date")
-    private Date date;
+    private String date;
 
 
-    public BirthDayInstanse(String firstName, String lastName, Date date) {
+    public BirthDayInstance(String firstName, String lastName, String date) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.date = date;
@@ -51,11 +51,11 @@ public class BirthDayInstanse {
         this.lastName = lastName;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 }
